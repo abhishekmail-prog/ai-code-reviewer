@@ -1,0 +1,67 @@
+.section {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s;
+}
+.header:hover { background: rgba(255,255,255,0.02); }
+
+.iconBox {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.icon_🐛  { background: rgba(248,113,113,0.12); }
+.icon_⏱  { background: rgba(251,191,36,0.12); }
+.icon_⚡  { background: rgba(91,156,246,0.12); }
+.icon_✨  { background: rgba(74,222,128,0.12); }
+
+.title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.title_bugs       { color: var(--red); }
+.title_complexity { color: var(--amber); }
+.title_optimize   { color: var(--accent); }
+.title_clean      { color: var(--green); }
+
+.badge {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.badge_bugs       { background: rgba(248,113,113,0.12); color: var(--red); }
+.badge_complexity { background: rgba(251,191,36,0.12);  color: var(--amber); }
+.badge_optimize   { background: rgba(91,156,246,0.12);  color: var(--accent); }
+.badge_clean      { background: rgba(74,222,128,0.12);  color: var(--green); }
+
+.chevron {
+  font-size: 11px;
+  color: var(--text3);
+  transition: transform 0.2s;
+  margin-left: 4px;
+}
+.chevron.open { transform: rotate(0deg); }
+.chevron:not(.open) { transform: rotate(-90deg); }
+
+.body { padding: 1rem 1.25rem; }
