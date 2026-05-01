@@ -1,104 +1,125 @@
-# AI Code Reviewer
+# 🤖 AI Code Reviewer
 
-A full-stack AI-powered code reviewer with React frontend and Node.js/Express backend.
+An AI-powered code review web application that analyzes code for bugs, complexity, and optimizations.
 
-## Features
-- Paste C++, JavaScript, or Python code
-- AI returns bugs, time/space complexity, optimizations, and a cleaned-up version
-- Dark theme, modular React components, loading animation
+Built using an AI-assisted development workflow ("vibe coding") while focusing on architecture, debugging, and iterative improvements.
 
-## Project Structure
+---
 
-```
+## 🚀 Features
+
+- 🔍 Analyze C++, JavaScript, and Python code
+- 🐞 Detect potential bugs and issues
+- ⚡ Time & Space complexity breakdown
+- 💡 Optimization suggestions
+- 🧹 Cleaned and improved version of code
+- 🌙 Modern dark-themed UI with smooth loading animations
+
+---
+
+## 🧠 What I Learned
+
+- How to effectively guide AI tools to generate useful code
+- Structuring a full-stack application (frontend + backend)
+- Debugging and refining AI-generated outputs
+- Designing APIs and handling async operations
+
+---
+
+## 🛠️ Tech Stack
+
+Frontend:
+- React
+- CSS Modules
+
+Backend:
+- Node.js
+- Express
+
+AI Integration:
+- OpenAI API
+
+---
+
+## 📁 Project Structure
+
 ai-code-reviewer/
 ├── backend/
 │   ├── src/
-│   │   ├── server.js              # Express entry point
-│   │   ├── routes/
-│   │   │   └── review.js          # POST /api/review route
-│   │   └── services/
-│   │       └── openaiService.js   # OpenAI GPT-4o call + prompt
+│   │   ├── server.js
+│   │   ├── routes/review.js
+│   │   └── services/openaiService.js
 │   ├── .env.example
 │   └── package.json
 └── frontend/
-    ├── public/
-    │   └── index.html
+    ├── public/index.html
     ├── src/
-    │   ├── index.js               # React entry
-    │   ├── App.jsx                # Root component
-    │   ├── App.module.css
-    │   ├── api.js                 # fetch wrapper for backend
+    │   ├── index.js
+    │   ├── App.jsx
+    │   ├── api.js
     │   └── components/
-    │       ├── CodeEditor.jsx     # Textarea + language selector
-    │       ├── CodeEditor.module.css
-    │       ├── LoadingBar.jsx     # Animated progress bar
-    │       ├── LoadingBar.module.css
-    │       ├── ResultSection.jsx  # Collapsible section wrapper
-    │       ├── ResultSection.module.css
-    │       ├── ReviewResults.jsx  # All 4 result panels
-    │       └── ReviewResults.module.css
     └── package.json
-```
 
-## Setup
+---
+
+## ⚙️ Setup Instructions
 
 ### 1. Backend
 
-```bash
-cd backend
-npm install
-cp .env.example .env
-# Edit .env and add your OPENAI_API_KEY
-npm run dev        # development (nodemon)
-# or
-npm start          # production
-```
+cd backend  
+npm install  
+cp .env.example .env  
 
-Backend runs on http://localhost:5000
+Add your API key in `.env`:
+
+OPENAI_API_KEY=your_api_key_here  
+PORT=5000  
+
+Run backend:
+
+npm run dev  
+
+---
 
 ### 2. Frontend
 
-```bash
-cd frontend
-npm install
-npm start
-```
+cd frontend  
+npm install  
+npm start  
 
-Frontend runs on http://localhost:3000 and proxies `/api/*` to the backend.
+---
 
-## Environment Variables
+## 🔌 API Endpoint
 
-**backend/.env**
-```
-OPENAI_API_KEY=sk-...
-PORT=5000
-```
+POST /api/review
 
-## API
-
-### POST /api/review
-
-**Request body:**
-```json
+Request:
 {
   "code": "def foo(): pass",
   "language": "python"
 }
-```
 
-**Response:**
-```json
+Response:
 {
-  "bugs": [{ "title": "...", "description": "..." }],
-  "complexity": {
-    "time": "O(n)",
-    "space": "O(1)",
-    "timeExplanation": "...",
-    "spaceExplanation": "..."
-  },
-  "optimizations": [{ "title": "...", "description": "..." }],
-  "cleanedCode": "def foo():\n    pass\n"
+  "bugs": [],
+  "complexity": {},
+  "optimizations": [],
+  "cleanedCode": ""
 }
-```
 
-Supported languages: `python`, `javascript`, `cpp`
+---
+
+## 📌 Notes
+
+- This project uses AI as a development tool, not a replacement for understanding
+- All structure, debugging, and improvements were handled manually
+
+---
+
+## 🌐 Future Improvements
+
+- User authentication
+- Save review history
+- Support more programming languages
+- Deploy as a public SaaS tool
+
