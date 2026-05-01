@@ -43,6 +43,7 @@ AI Integration:
 
 ## 📁 Project Structure
 
+```
 ai-code-reviewer/
 ├── backend/
 │   ├── src/
@@ -60,6 +61,7 @@ ai-code-reviewer/
     │   └── components/
     └── package.json
 
+```
 ---
 
 ## ⚙️ Setup Instructions
